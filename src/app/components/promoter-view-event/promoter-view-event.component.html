@@ -1,0 +1,43 @@
+<div class="card" *ngIf="data">
+    
+    
+    <h1 mat-dialog-title class="text-center">Event details</h1>
+    <mat-dialog-content >
+        <label for="form-name">Name</label>
+        <input disabled  placeholder="event name" [(ngModel)]="data.name" type="text">
+        <td></td>
+        <label for="form-quantity"><b>Address</b></label>
+        <td></td>
+        <label for="form-quantity">Street</label>
+        <input disabled  placeholder="Event street" [(ngModel)]="data.address.street" type="text">
+        <td></td>
+        <label for="form-quantity">Post Code</label>
+        <input disabled  placeholder="Event post_code" [(ngModel)]="data.address.post_code" type="text">
+        <td></td>
+        <label for="form-city">City</label>
+        <input disabled id="form-city" placeholder="Event city" [(ngModel)]="data.address.city" type="text">
+        <td></td>
+        <label for="form-quantity">Country</label>
+        <input disabled id="form-quantity" placeholder="Event country" [(ngModel)]="data.address.country" type="text">
+        <td></td>
+        <label for="form-capacity">Capacity</label>
+        <input disabled id="form-capacity" placeholder="Event capacity" [(ngModel)]="data.capacity" type="number">
+        <td></td>
+        <label for="form-current">Current</label>
+        <input disabled id="form-current" placeholder="Event current" [(ngModel)]="data.current" type="number">
+        <td></td>
+        <label for="form-date">Date</label>
+        <input disabled id="form-date" placeholder="Event date" [(ngModel)]="data.date" type="datetime-local">
+        <td></td>
+        <label for="form-price">price</label>
+        <input disabled id="form-price" placeholder="Event price" [(ngModel)]="data.price" type="number">
+        <td></td>
+        <mat-checkbox disabled id="form-active"[(ngModel)]="data.activate">Activate</mat-checkbox>
+       
+        <td></td>
+
+        <mat-dialog-actions>
+            <button mat-raised-button [mat-dialog-close]="false" > close</button>
+        </mat-dialog-actions>
+    </mat-dialog-content>
+

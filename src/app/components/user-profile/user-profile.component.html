@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="user-profile.component.css" media="screen" />
+</head>
+<app-menu-user></app-menu-user>
+<div class="card" *ngIf="user">
+    
+
+    <div class="container">
+        <div class="containerImg"> 
+            <img src="logo.jpg">
+            <br>
+        </div>
+        <div class="item-form">
+            <label for="form-name">First Name</label><br>
+            <input  id="form-name" placeholder="User fname" [(ngModel)]="user.fname" type="text">
+            <td></td>
+            <label for="form-quantity">Last Name</label><br>
+            <input  id="form-quantity" placeholder="User lname" [(ngModel)]="user.lname" type="text">
+            <td></td>
+            <label for="form-quantity">Email</label><br>
+            <input disabled id="form-quantity" placeholder="User lname" [(ngModel)]="user.email" type="text">
+            <td></td>
+            <label for="form-quantity">Gender</label><br>
+            <select  id="form-quantity"   placeholder="gender" [(ngModel)]="user.gender" type="text">
+                <option value ="M">M</option>
+                <option value ="F">F</option>
+            </select><br>
+            <label for="form-quantity">Password</label><br>
+            <input  id="form-quantity" placeholder="User gender" [(ngModel)]="user.password" type="text">
+            <td></td><br>
+            <a mat-raised-button class="item-button" (click)="updateProfile(user)"> Edit User</a>
+        </div>
+    </div>
+    
+
+</div>
+
+<app-footer></app-footer>

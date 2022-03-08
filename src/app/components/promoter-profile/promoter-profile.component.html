@@ -1,0 +1,37 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="promoter-profile.component.css" media="screen" />
+</head>
+<app-menu-promoter></app-menu-promoter>
+<div class="card" *ngIf="promoter">
+    
+
+    <div class="container">
+        <div class="containerImg"> 
+            <img src="logo.jpg" >
+            <br>
+        </div>
+        <div class="item-form">
+            <label for="form-name">First Name</label><br>
+            <input  id="form-name" placeholder="Promoter fname" [(ngModel)]="promoter.fname" type="text">
+            <td></td>
+            <label for="form-quantity">Last Name</label><br>
+            <input  id="form-quantity" placeholder="Promoter lname" [(ngModel)]="promoter.lname" type="text">
+            <td></td>
+            <label for="form-quantity">Email</label><br>
+            <input disabled id="form-quantity" placeholder="Promoter lname" [(ngModel)]="promoter.email" type="text">
+            <td></td>
+            <label for="form-quantity">Gender</label><br>
+            <select  id="form-quantity"   placeholder="gender" [(ngModel)]="promoter.gender" type="text">
+                <option value ="M">M</option>
+                <option value ="F">F</option>
+            </select><br>
+            <label for="form-quantity">Password</label><br>
+            <input  id="form-quantity" placeholder="User gender" [(ngModel)]="promoter.password" type="text">
+            <br><br><a mat-raised-button class="item-button" (click)="updateProfile(promoter)"> Edit Promoter</a>
+        </div>
+    </div>
+    
+
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,19 @@
+
+<body> 
+    <app-menu-admin></app-menu-admin>
+    <div class="container">
+        <mat-card>
+            <h1 class="text-center">Change password</h1>
+            <div class="row">
+                <label for="form-name">New Password </label> <td></td>
+                <input name="password" placeholder="New password" [(ngModel)]="admin.password" type="text"> <td></td>
+                <div class="text-center">
+                    <button mat-raised-button color="warn" class="item-button text-center" (click)="updateAdmin(admin)"> Update </button>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    
+    <app-footer></app-footer>
+</body>
+    

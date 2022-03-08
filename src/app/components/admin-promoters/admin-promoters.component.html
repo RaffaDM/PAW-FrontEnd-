@@ -1,0 +1,28 @@
+<app-menu-admin></app-menu-admin>
+
+<div class="body" id="promoterTable" *ngIf="promoters">
+  <h1 class="text-center">Promoter list</h1>
+  <a mat-raised-button color="primary" (click)="createPromoter()">
+    Create Promoter
+  </a>
+  <div class="container">
+    <div class="row" *ngFor="let promoter of promoters; let i = index">
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <i class="material-icons circle">face</i>
+          <span class="title"> {{ promoter.email }}</span>
+          <br />
+          <a mat-mini-fab color="secondary" (click)="openDialog(promoter._id)">
+            View
+          </a>
+          &nbsp;&nbsp;
+          <a mat-mini-fab color="warn" (click)="deletePromoter(promoter._id)">
+            delete
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

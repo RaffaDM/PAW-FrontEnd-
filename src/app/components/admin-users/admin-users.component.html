@@ -1,0 +1,31 @@
+<app-menu-admin></app-menu-admin>
+<div class="body" id="userTable" *ngIf="users">
+
+
+    <h1 class="text-center">User list</h1>
+    <a mat-raised-button color="primary" (click)="createUser()">
+        Create User
+      </a>
+      <div class="container">
+        <div class="row" *ngFor="let user of users; let i = index">
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <i class="material-icons circle">face</i>
+              <span class="title"> {{ user.email }}</span>
+              <br />
+              <a mat-mini-fab color="secondary" (click)="openDialog(user._id)">
+                View
+              </a>
+              &nbsp;&nbsp;
+              <a mat-mini-fab color="warn" (click)="deleteUser(user._id)">
+                delete
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    
+
+</div>
+<app-footer></app-footer>

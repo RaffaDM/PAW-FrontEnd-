@@ -1,0 +1,51 @@
+<div class="card" *ngIf="event">
+    
+    
+    <h1 class="text-center">Event details</h1>
+    <div class="item-form">
+        <label for="form-name">Name</label>
+        <input  name="name" [(ngModel)]="event.name" type="text">
+        <td></td>
+        <label for="form-name">Category</label>
+        <select [(ngModel)]="category" placeholder="category"type="text" id="category" name="category">
+            <option value="Concert">Concert</option>
+            <option value="SunSet">SunSet</option>
+            <option value="Party">Party</option>
+            <option value="Meeting">Meeting</option>
+        </select><br>
+        <td></td>
+        <label for="form-quantity"><b>Address</b></label>
+        <td></td>
+        <label for="form-quantity">Street</label>
+        <input   name="" placeholder="Event street" [(ngModel)]="event.address.street" type="text">
+        <td></td>
+        <label for="form-quantity">Post Code</label>
+        <input   placeholder="Event post_code" [(ngModel)]="event.address.post_code" type="text">
+        <td></td>
+        <label for="form-quantity">City</label>
+        <input   placeholder="Event city" [(ngModel)]="event.address.city" type="text">
+        <td></td>
+        <label for="form-quantity">Country</label>
+        <input   placeholder="Event country" [(ngModel)]="event.address.country" type="text">
+        <td></td>
+        <label for="form-quantity">Capacity</label>
+        <input  placeholder="Event country" [(ngModel)]="event.capacity" type="number">
+        <td></td>
+        <label for="form-quantity">Current</label>
+        <input   placeholder="Event country" [(ngModel)]="event.current" type="number">
+        <td></td>
+        <label for="form-quantity">Date</label>
+        <input   placeholder="Event country" [(ngModel)]="event.date" type="datetime-local">
+        <td></td>
+        <label for="form-quantity">price</label>
+        <input  price="price" placeholder="Event country" [(ngModel)]="event.price" type="number">
+        <td></td>
+        <label for="form-quantity">activate</label>
+        <input   placeholder="Event country" [(ngModel)]="event.activate" type="text">
+        <mat-slide-toggle>Slide me!</mat-slide-toggle>
+        <td></td>
+
+        <button class="item-button" (click)="updateEvent()"> Update </button>
+    </div>
+
+</div>

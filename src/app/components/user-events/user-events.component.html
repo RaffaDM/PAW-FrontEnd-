@@ -1,0 +1,20 @@
+<app-menu-user></app-menu-user>
+<div class="body" *ngIf="events">
+  <h1 class="text-center">Event list</h1>
+
+  <div class="container">
+    <div class="row" *ngFor="let event of events; let i = index">
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <i class="material-icons circle">face</i>
+          <span class="title"> {{ event.name }}</span>
+          <br />
+          <a mat-mini-fab color="secondary" (click)="openDialog(event._id)">
+            View
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

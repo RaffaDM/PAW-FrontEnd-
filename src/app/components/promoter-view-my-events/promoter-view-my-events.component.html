@@ -1,0 +1,51 @@
+<div class="card" *ngIf="data">
+    
+    
+    <h1 mat-dialog-title class="text-center">Event details</h1>
+    <mat-dialog-content >
+        <label for="form-name">Name</label>
+        <input  placeholder="event name" [(ngModel)]="data.name" type="text">
+        <td></td>
+        <mat-label>Category</mat-label>
+        <select matNativeControl [(ngModel)]="data.category">
+            <option value="Concert">Concert</option>
+            <option value="SunSet">SunSet</option>
+            <option value="Party">Party</option>
+            <option value="Meeting">Meeting</option>
+        </select>
+        <td></td>
+        <label for="form-quantity"><b>Address</b></label>
+        <td></td>
+        <label for="form-quantity">Street</label>
+        <input   placeholder="Event street" [(ngModel)]="data.address.street" type="text">
+        <td></td>
+        <label for="form-quantity">Post Code</label>
+        <input placeholder="Event post_code" [(ngModel)]="data.address.post_code" type="text">
+        <td></td>
+        <label for="form-city">City</label>
+        <input id="form-city" placeholder="Event city" [(ngModel)]="data.address.city" type="text">
+        <td></td>
+        <label for="form-quantity">Country</label>
+        <input  id="form-quantity" placeholder="Event country" [(ngModel)]="data.address.country" type="text">
+        <td></td>
+        <label for="form-capacity">Capacity</label>
+        <input  id="form-capacity" placeholder="Event capacity" [(ngModel)]="data.capacity" type="number">
+        <td></td>
+        <label for="form-current">Current</label>
+        <input id="form-current" placeholder="Event current" [(ngModel)]="data.current" type="number">
+        <td></td>
+        <label for="form-date">Date</label>
+        <input  id="form-date" placeholder="Event date" [(ngModel)]="data.date" type="datetime-local">
+        <td></td>
+        <label for="form-price">price</label>
+        <input  id="form-price" placeholder="Event price" [(ngModel)]="data.price" type="number">
+        <td></td>
+        <mat-checkbox  id="form-active"[(ngModel)]="data.activate">Activate</mat-checkbox>
+       
+        <td></td>
+
+        <mat-dialog-actions>
+            <button mat-raised-button [mat-dialog-close]="false" > close</button>
+            <button mat-raised-button [mat-dialog-close]="data" color="warn" > Save</button>
+        </mat-dialog-actions>
+    </mat-dialog-content>

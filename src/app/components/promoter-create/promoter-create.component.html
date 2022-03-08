@@ -1,0 +1,37 @@
+
+<app-menu-promoter></app-menu-promoter>
+<div id="container">
+    <h1 align="center">Create Event</h1>
+        <div class="container">
+
+                    <label for ="fname">Name</label>
+                    <input [(ngModel)]="name" placeholder="Event name..." type="text" id="name" name="name"><br>
+
+                    <label for ="category">Category</label>
+                    <select [(ngModel)]="category" placeholder="category"type="text" id="category" name="category">
+                        <option value="Concert">Concert</option>
+                        <option value="SunSet">SunSet</option>
+                        <option value="Party">Party</option>
+                        <option value="Meeting">Meeting</option>
+                    </select><br>
+                    <label for ="fname">Street</label>
+                    <input [(ngModel)]="address.street" placeholder="Event street..." type="text" id="name" name="name"><br>
+
+                    <label for ="fname">Post Code</label>
+                    <input  [(ngModel)]="address.post_code" placeholder="Event post code..." type="text" id="name" name="name"><br>
+
+                    <label for ="fname">City</label>
+                    <input [(ngModel)]="address.city" placeholder="Event city..." type="text" id="name" name="name"><br>
+
+                    <label for ="fname">Country</label>
+                    <input [(ngModel)]="address.country" placeholder="Event country ..." type="text" id="name" name="name"><br>
+
+                    <label for ="fname">Date</label>
+                    <input [(ngModel)]="date" placeholder="Event country ..." type="Date" id="name" name="name"><br>
+
+                    <label for ="fname">Price</label>
+                    <input [(ngModel)]="price" placeholder="Event country ..." type="number" id="name" name="name"><br>
+                    <br>    
+                    <a mat-raised-button color="primary" class="login-button" (click)="createEvent()"> Create </a>
+</div>
+<app-footer></app-footer>

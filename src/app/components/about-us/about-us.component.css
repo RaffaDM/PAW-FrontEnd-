@@ -1,0 +1,17 @@
+.img1{
+    background-image: url(hermedinger.jpg)
+}
+.img2{
+    background-image: url(sasuke.jpg)
+}
+.img3{
+    background-image: url(punchMan.jpg)
+}
+.container{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 75%;
+    padding-left: 11%;
+    padding-top: 2%;
+}

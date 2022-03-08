@@ -1,0 +1,21 @@
+<app-menu-promoter></app-menu-promoter>
+<div class ="body" id="eventsTable" *ngIf="events">
+  
+        <h1 class="text-center">Event list</h1>
+        <a mat-raised-button color="primary" (click)="createEvent()">Create Event</a>
+        <div class="container">
+            <div class="row" *ngFor="let event of events; let i = index">
+              <ul class="collection">
+                <li class="collection-item avatar">
+                  <i class="material-icons circle">star</i>
+                  <span class="title"> {{ event.name }}</span>
+                  <br />
+                  <a mat-mini-fab color="secondary" (click)="openDialog(event._id)">
+                    View
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </div>
+<app-footer></app-footer>

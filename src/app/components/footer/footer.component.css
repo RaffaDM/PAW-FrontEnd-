@@ -1,0 +1,10 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  height: 40px;
+}
+.a{
+    font-size: 14px;
+}

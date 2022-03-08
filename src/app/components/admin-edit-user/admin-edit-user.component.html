@@ -1,0 +1,21 @@
+<div class="card" *ngIf="user">
+    
+    
+    <h1 class="text-center">User details</h1>
+    <div class="item-form">
+        <label for="form-name">First Name</label>
+        <input name="fname" placeholder="User fname" [(ngModel)]="user.fname" type="text">
+        <td></td>
+        <label for="form-quantity">Last Name</label>
+        <input name="lname" placeholder="User lname" [(ngModel)]="user.lname" type="text">
+        <td></td>
+        <label for="form-quantity">Email</label>
+        <input  name="email" [(ngModel)]="user.email" type="text">
+        <td></td>
+        <label for="form-quantity">Gender</label>
+        <input  name="gender" [(ngModel)]="user.gender" type="text">
+         <td></td>
+        <button class="item-button" (click)="updateUser()"> Update </button>
+    </div>
+
+</div>

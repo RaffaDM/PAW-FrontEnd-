@@ -1,0 +1,21 @@
+<div class="card" *ngIf="promoter">
+    
+    
+    <h1 class="text-center">Promoter details</h1>
+    <div class="item-form">
+        <label for="form-name">First Name</label>
+        <input name="fname" placeholder="Promoter fname" [(ngModel)]="promoter.fname" type="text">
+        <td></td>
+        <label for="form-quantity">Last Name</label>
+        <input name="lname" placeholder="Promoter lname" [(ngModel)]="promoter.lname" type="text">
+        <td></td>
+        <label for="form-quantity">Email</label>
+        <input  name="email" [(ngModel)]="promoter.email" type="text">
+        <td></td>
+        <label for="form-quantity">Gender</label>
+        <input  name="gender" [(ngModel)]="promoter.gender" type="text">
+         <td></td>
+        <button class="item-button" (click)="updatePromoter()"> Update </button>
+    </div>
+
+</div>

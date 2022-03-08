@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+full-calendar{
+    height: 500px;
+    width: 900px;
+    padding-top: 30px;
+}

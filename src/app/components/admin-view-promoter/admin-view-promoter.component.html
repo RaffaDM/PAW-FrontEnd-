@@ -1,0 +1,23 @@
+<div class="card" *ngIf="data">
+    <h1 mat-dialog-title class="text-center">Promoter details</h1>
+    <mat-dialog-content>
+        <label for="form-name">First Name</label><td></td>
+        <input  id="form-name" placeholder="Promoter fname" [(ngModel)]="data.fname" type="text">
+        <td></td>
+        <label for="form-quantity">Last Name</label><td></td>
+        <input  id="form-quantity" placeholder="Promoter lname" [(ngModel)]="data.lname" type="text">
+        <td></td>
+        <label for="form-quantity">Email</label><td></td>
+        <input email id="form-quantity" placeholder="Promoter email" [(ngModel)]="data.email" type="text">
+        <td></td>
+        <label for="form-quantity">Gender</label><td></td>
+        <input  id="form-quantity" placeholder="Promoter gender" [(ngModel)]="data.gender" type="text">
+        <td></td>
+        <mat-dialog-actions>
+            <button mat-raised-button [mat-dialog-close]="false" > close</button>
+            <button mat-raised-button color="warn" [mat-dialog-close]="data" > save</button>
+        </mat-dialog-actions>
+    </mat-dialog-content>
+
+</div>
+
